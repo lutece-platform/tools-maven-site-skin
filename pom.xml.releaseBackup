@@ -39,7 +39,6 @@ under the License.
     <connection>scm:git:https://github.com/lutece-platform/tools-maven-site-skin.git</connection>
     <developerConnection>scm:git:https://github.com/lutece-platform/tools-maven-site-skin.git</developerConnection>
     <url>https://github.com/lutece-platform/tools-maven-site-skin.git</url>
-    <tag>HEAD</tag>
   </scm>
   
 
@@ -81,8 +80,8 @@ under the License.
       <resource>
         <directory>${project.build.directory}/${project.build.finalName}</directory>
         <includes>
-          <include>css/lutece-maven-skin-${project.version}.min.css</include>
-          <include>js/lutece-maven-skin-${project.version}.min.js</include>
+          <include>css/apache-maven-fluido-${project.version}.min.css</include>
+          <include>js/apache-maven-fluido-${project.version}.min.js</include>
         </includes>
       </resource>
     </resources>
