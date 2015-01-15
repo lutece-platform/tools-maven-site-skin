@@ -24,7 +24,7 @@ under the License.
 
     <groupId>fr.paris.lutece.tools</groupId>
     <artifactId>lutece-maven-skin</artifactId>
-    <version>0.9.0-SNAPSHOT</version>
+    <version>0.9.0</version>
 
     <name>Lutece Maven Skin</name>
     <description>Based on the Apache Maven Fluido Skin built on top of Twitter's bootstrap.</description>
