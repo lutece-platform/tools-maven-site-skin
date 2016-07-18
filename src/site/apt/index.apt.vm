@@ -1,7 +1,8 @@
  ------
  Introduction
  ------
- Hervé Boutemy, Simone "Simo" Tripodi
+ Hervé Boutemy
+ Simone "Simo" Tripodi
  ------
  2012-06-28
  ------
@@ -33,6 +34,11 @@ Welcome to ${project.name}!
 
  A {{{./sample.html}sample page}} is provided to see the skin in action, and two complete sites to show skin
  configurations: one for {{{./sidebar/}sidebar layout (default)}} and the other for {{{./topbar/}topbar layout}}.
+
+ Notice: since version 1.5 of this skin, Velocity 1.7 (used by Maven Site Plugin version 3.5) is required.
+ But in previous versions of the skin, it was Velocity 1.5, which has some incompatibilities.
+ If you need to mix versions, please see {{{/plugins/maven-site-plugin/migrate.html}the migration guide}} to override
+ Velocity version used by Maven Site Plugin as per your specific skin and site plugin requirements. 
 
 * Usage
 
@@ -143,8 +149,8 @@ Welcome to ${project.name}!
 
 ** Configuring column class
 
-  When using sidebar, the left column used by default span3 class and body column use span9.
-  To prevent weird/ugly result, the sum must be 12.
+  When using sidebar, the navigation column uses by default <<<span2>>> class and body column uses
+  <<<span10>>>. To prevent weird/ugly result, the sum must be 12.
   You can change that using:
 
 +-----+
@@ -152,8 +158,8 @@ Welcome to ${project.name}!
   [...]
   <custom>
     <fluidoSkin>
-      <leftColumnClass>span2</leftColumnClass>
-      <bodyColumnClass>span10</bodyColumnClass>
+      <leftColumnClass>span3</leftColumnClass>
+      <bodyColumnClass>span9</bodyColumnClass>
     </fluidoSkin>
   </custom>
   [...]
@@ -236,10 +242,10 @@ Welcome to ${project.name}!
 </project>
 +-----+
 
-** Footers placeholders
+** head/footer placeholders
 
- Since <<<#eval>>> Velocity macro is not supported yet, the only placeholder
- available in additional footers is <<<@project.name@>>>.
+ This skin will pass your custom head/footer to <<<${esc.d}render.eval()>>> and replace all variables
+ known to the Velocity context.
 
 ** GitHub ribbons
 

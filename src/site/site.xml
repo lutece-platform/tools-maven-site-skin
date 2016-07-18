@@ -29,7 +29,7 @@ under the License.
   <skin>
     <groupId>${project.groupId}</groupId>
     <artifactId>${project.artifactId}</artifactId>
-    <version>${project.version}</version>
+    <version>1.4</version>
   </skin>
 
   <custom>
@@ -51,7 +51,6 @@ under the License.
     <menu name="Overview">
       <item name="Introduction" href="./index.html"/>
       <item name="Sample Page" href="./sample.html"/>
-      <item name="Press" href="./press.html"/>
       <item name="Powered By" href="./poweredby.html"/>
       <!-- According to http://jira.codehaus.org/browse/MNGSITE-152 -->
       <item name="License" href="http://www.apache.org/licenses/"/>
@@ -96,8 +95,10 @@ under the License.
     <menu ref="reports"/>
 
     <footer>
-      <div class="row-fluid">Apache Maven, ${project.name}, Apache, the Apache feather logo, and the Apache Maven project logos are trademarks of The Apache Software Foundation.
+      <![CDATA[
+      <div class="row-fluid">Apache Maven, $project.name, Apache, the Apache feather logo, and the Apache Maven project logos are trademarks of The Apache Software Foundation.
       All other marks mentioned may be trademarks or registered trademarks of their respective owners.</div>
+      ]]>
     </footer>
   </body>
 </project>
