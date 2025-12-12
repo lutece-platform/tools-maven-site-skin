@@ -47,11 +47,10 @@
             <id>lutece_releases_repository</id>
             <url>https://dev.lutece.paris.fr/nexus/content/repositories/lutece_releases_repository</url>
         </repository>
-		
         <snapshotRepository>
             <uniqueVersion>true</uniqueVersion>
             <id>lutece_snapshots_repository</id>
-            <url>http://dev.lutece.paris.fr/nexus/content/repositories/lutece_snapshots_repository</url>
+            <url>https://dev.lutece.paris.fr/nexus/content/repositories/lutece_snapshots_repository</url>
         </snapshotRepository>
     </distributionManagement>
 
