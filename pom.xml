@@ -70,14 +70,24 @@
                 </includes>
             </resource>
 
-            <!-- exclude css and js since will include the minified version -->
+            <!-- exclude css, js and binary fonts since will include the minified version -->
             <resource>
                 <directory>${basedir}/src/main/resources</directory>
                 <excludes>
                     <exclude>css/**</exclude>
                     <exclude>js/**</exclude>
+                    <exclude>fonts/**</exclude>
                 </excludes>
                 <filtering>true</filtering> <!-- add skin-info -->
+            </resource>
+
+            <!-- include binary fonts without filtering -->
+            <resource>
+                <directory>${basedir}/src/main/resources</directory>
+                <includes>
+                    <include>fonts/**</include>
+                </includes>
+                <filtering>false</filtering>
             </resource>
 
             <!-- include the print.css -->
