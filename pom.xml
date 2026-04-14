@@ -52,6 +52,10 @@
             <id>lutece_snapshots_repository</id>
             <url>https://dev.lutece.paris.fr/nexus/content/repositories/lutece_snapshots_repository</url>
         </snapshotRepository>
+        <site>
+            <id>lutece_ftp_site_maven</id>
+            <url>ftp://site-deploy.dev.lutece.paris.fr/site/tools</url>
+        </site>
     </distributionManagement>
 
     <properties>
