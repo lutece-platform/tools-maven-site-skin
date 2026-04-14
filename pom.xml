@@ -6,8 +6,8 @@
     <version>0.9.2-SNAPSHOT</version>
 
     <name>Lutece Maven Site Skin</name>
-    <description>Based on the Apache Maven Fluido Skin built on top of Twitter's bootstrap.</description>
-
+    <description>Based on the Apache Maven Fluido Skin built on top of Bootstrap.</description>
+    <url>https://dev.lutece.paris.fr/site/tools/${project.artifactId}</url>
 
     <repositories>
         <repository>
@@ -59,6 +59,8 @@
     </distributionManagement>
 
     <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <bootstrap.version>2.3.2</bootstrap.version>
         <jquery.version>1.11.2</jquery.version>
     </properties>
@@ -124,6 +126,11 @@
                             <exclude>src/main/resources/js/jquery-*.js</exclude>
                         </excludes>
                     </configuration>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-project-info-reports-plugin</artifactId>
+                    <version>3.9.0</version>
                 </plugin>
             </plugins>
         </pluginManagement>
