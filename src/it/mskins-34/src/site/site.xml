@@ -21,8 +21,8 @@
  */
  -->
 
-<project xmlns="http://maven.apache.org/DECORATION/1.1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/DECORATION/1.1.0 http://maven.apache.org/xsd/decoration-1.1.0.xsd"
+<project xmlns="http://maven.apache.org/DECORATION/2.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/DECORATION/2.0.0 http://maven.apache.org/xsd/decoration-2.0.0.xsd"
   name="${skinName}">
 
   <skin>
@@ -34,7 +34,6 @@
   <!-- START SNIPPET: skin-custom-config -->
   <custom>
     <fluidoSkin>
-      <googlePlusOne />
     </fluidoSkin>
   </custom>
   <!-- END SNIPPET: skin-custom-config -->

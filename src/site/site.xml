@@ -19,8 +19,8 @@ specific language governing permissions and limitations
 under the License.
 -->
 
-<project xmlns="http://maven.apache.org/DECORATION/1.1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/DECORATION/1.1.0 http://maven.apache.org/xsd/decoration-1.1.0.xsd">
+<project xmlns="http://maven.apache.org/DECORATION/2.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/DECORATION/2.0.0 http://maven.apache.org/xsd/decoration-2.0.0.xsd">
 
   <bannerLeft>
     <name>${project.name}</name>
@@ -34,13 +34,16 @@ under the License.
 
   <custom>
     <fluidoSkin>
-      <googlePlusOne />
       <facebookLike />
       <gitHub>
         <projectId>apache/maven-skins</projectId>
         <ribbonOrientation>right</ribbonOrientation>
         <ribbonColor>gray</ribbonColor>
       </gitHub>
+      <footerContent>
+        <div class="row-fluid">Apache Maven, $project.name, Apache, the Apache feather logo, and the Apache Maven project logos are trademarks of The Apache Software Foundation.
+        All other marks mentioned may be trademarks or registered trademarks of their respective owners.</div>
+      </footerContent>
     </fluidoSkin>
   </custom>
 
@@ -94,11 +97,5 @@ under the License.
 
     <menu ref="reports"/>
 
-    <footer>
-      <![CDATA[
-      <div class="row-fluid">Apache Maven, $project.name, Apache, the Apache feather logo, and the Apache Maven project logos are trademarks of The Apache Software Foundation.
-      All other marks mentioned may be trademarks or registered trademarks of their respective owners.</div>
-      ]]>
-    </footer>
   </body>
 </project>

@@ -661,27 +661,6 @@
   #end
 #end
 ##
-#macro ( googlePlusOne $sideBarEnabled )
-  #if ( $decoration.custom.getChild( 'fluidoSkin' ).getChild( 'googlePlusOne' )
-          && $project.url )
-    #set( $dataSize = 'tall' )
-    #if( !$sideBarEnabled )
-      #set( $dataSize = 'medium' )
-    #end
-
-    <script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
-
-    #if( !$sideBarEnabled )
-    <ul class="nav pull-right"><li style="margin-top: 10px;">
-    #end
-
-    <div class="g-plusone" data-href="$project.url" data-size="$dataSize" #if( !$sideBarEnabled ) width="60px" align="right" #end></div>
-
-    #if( !$sideBarEnabled )
-    </li></ul>
-    #end
-  #end
-#end
 ##
 #macro ( facebookLike $sideBarEnabled )
   #if ( $decoration.custom.getChild( 'fluidoSkin' ).getChild( 'facebookLike' )
@@ -991,7 +970,6 @@
 
           #if ( !$sideBarEnabled )
             #facebookLike( $sideBarEnabled )
-            #googlePlusOne( $sideBarEnabled )
             #followTwitter( $sideBarEnabled )
             #flattrBody( $sideBarEnabled )
           #end
@@ -1078,8 +1056,6 @@
           <hr />
 
            <div id="poweredBy">
-             #googlePlusOne( $sideBarEnabled )
-             <div class="clear"></div>
              #facebookLike( $sideBarEnabled )
              <div class="clear"></div>
              #followTwitter( $sideBarEnabled )
@@ -1131,8 +1107,8 @@
         #else
         <div class="row">
         #end
-        #if ( $decoration.body.footer )
-          $render.eval( $decoration.body.footer )
+        #if ( $decoration.custom.getChild( 'fluidoSkin' ) && $decoration.custom.getChild( 'fluidoSkin' ).getChild( 'footerContent' ) )
+          $render.eval( $decoration.custom.getChild( 'fluidoSkin' ).getChild( 'footerContent' ).getValue() )
         #else
           #if ( $decoration.custom.getChild( 'fluidoSkin' ) && $decoration.custom.getChild( 'fluidoSkin' ).getChild('copyrightClass') )
             #set ( $copyrightClass = 'class="' + $decoration.custom.getChild( 'fluidoSkin' ).getChild('copyrightClass').getValue() + '"' )
