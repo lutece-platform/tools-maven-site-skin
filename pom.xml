@@ -63,6 +63,8 @@
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <bootstrap.version>2.3.2</bootstrap.version>
         <jquery.version>1.11.2</jquery.version>
+        <maven-release-plugin.version>3.3.1</maven-release-plugin.version>
+        <maven-scm-provider-jgit.version>2.2.1</maven-scm-provider-jgit.version>
     </properties>
 
     <build>
@@ -135,6 +137,23 @@
             </plugins>
         </pluginManagement>
         <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-release-plugin</artifactId>
+                <version>${maven-release-plugin.version}</version>
+                <configuration>
+                    <providerImplementations>
+                        <git>jgit</git>
+                    </providerImplementations>
+                </configuration>
+                <dependencies>
+                    <dependency>
+                        <groupId>org.apache.maven.scm</groupId>
+                        <artifactId>maven-scm-provider-jgit</artifactId>
+                        <version>${maven-scm-provider-jgit.version}</version>
+                    </dependency>
+                </dependencies>
+            </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-site-plugin</artifactId>
